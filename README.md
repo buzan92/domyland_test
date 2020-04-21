@@ -5,7 +5,7 @@
 ## Как развернуть
 
 ### backend
-- В объекте настроек backend/config/env/common.js необходимо указать ключ для reCaptcha
+- Создать файл .env согласно образцу .env.example с указанием ключа для reCaptcha
 - npm i
 - npm run start
 
