@@ -1,3 +1,4 @@
+require('dotenv').config()
 const host = process.env.HOST || "http://localhost";
 const port = process.env.PORT || 5000;
 
@@ -21,7 +22,7 @@ export default {
   },
   modules: ["users", "auth", "feeds"],
   recaptcha: {
-    siteSecret: "6Ld0d-sUAAAAANFPSaopIZCCRmdd3xd-6nt9Grno"
+    siteSecret: process.env.RECAPTCHA_SITE_SECRET
   },
   google: {
     clientID:

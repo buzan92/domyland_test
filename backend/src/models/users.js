@@ -58,7 +58,7 @@ User.methods.generateToken = function generateToken() {
   const user = this;
   return jwt.sign(
     {
-      exp: Math.floor(Date.now() / 1000) + 60 * 60,
+      exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30,
       id: user.id
     },
     config.token

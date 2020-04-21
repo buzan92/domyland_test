@@ -17,6 +17,12 @@ export async function authUser(ctx, next) {
   })(ctx, next);
 }
 
+export async function me(ctx) {
+  ctx.body = {
+    data: ctx.state.user
+  };
+}
+
 export async function googleAuth(ctx) {
   const { token } = ctx.request.smartParams;
 
